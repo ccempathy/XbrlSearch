@@ -1,0 +1,21 @@
+spring:
+  datasource:
+
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:postgresql://127.0.0.1:5432/test?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    username: postgres
+    password: 221047
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+server:
+  port: 8080
+
+spring.jpa.database-platform: com.example.demo.entity.CustomPostgreSqlDialect
+
+
+logging.level.org.hibernate.engine.jdbc.env.internal.LobCreatorBuilderImpl: ERROR
+
+logging.level.root: INFO
